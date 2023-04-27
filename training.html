@@ -10,14 +10,15 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script>
-        $(function () {
-            var ortn = window.orientation > 1;
-            ortn ? $('#header').load('headerD.html') : $('#header').load('headerM.html');
-            //ortn ? console.log('desktop hai'): console.log('mobile');
-            $('#footer').load('footer.html');
-        });
-    </script>
+        <script>
+            $(function () {
+              var ortn = window.orientation < 1;
+              ortn ? $('#header').load('headerM.html') : $('#header').load('headerD.html');
+              //ortn ? console.log('mobile'): console.log('desktop');
+              $('#footer').load('footer.html');
+            });
+          </script>
+      
 </head>
 
 <body>
